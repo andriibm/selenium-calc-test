@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -16,7 +17,7 @@ public class CalculatorTest {
     @Before
     public void start()
     {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/Tom/Downloads/TestAutomation/chromedriver_win32/chromedriver.exe");
+        ChromeDriverManager.getInstance().setup();
         driver = new ChromeDriver();
         driver.get("file:///C:/Users/Tom/Downloads/TestAutomation/web%20calc/calc.html");
     }
