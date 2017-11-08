@@ -10,16 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CalculatorTest {
 
-
-
     private WebDriver driver;
 
     @Before
-    public void start()
-    {
+    public void start() {
         ChromeDriverManager.getInstance().setup();
         driver = new ChromeDriver();
-        driver.get("file:///C:/Users/Tom/Downloads/TestAutomation/web%20calc/calc.html");
+        driver.get(getClass().getClassLoader().getResource("calc.html").toString());
     }
 
     @Test
